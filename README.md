@@ -14,9 +14,9 @@ The full setup isn't here. This is a short demo. If you only read one page, read
 
 I no longer review every line of code myself, which might sound scary to some developers. But in my eyes, development has moved past that point. We have an extremely powerful tool that can be used to write code much faster, and my job now is to utilise that tool and make it safe and trustworthy. I need to make sure my tools understand the task properly, and judge whether a change is worth making or goes against our goals.
 
-It doesn't matter much what language the code is in. That's how I moved from AL to TypeScript: the agents know the language, and my job is to give them what they need to write what I want.
-
 Tests, a visual check and a code review agent check the code. I check the decisions. That's where my ERP background helps: I can tell when a change would break the data model or the system around it.
+
+It doesn't matter much what language the code is in. That's how I moved from AL to TypeScript: the agents know the language, and my job is to give them what they need to write what I want.
 
 My most important thought: "Building the wrong thing ALWAYS costs more than an expensive, in-depth review beforehand." The most important check happens before any code is written.
 
