@@ -1,0 +1,25 @@
+{
+  "name": "plan-reviewer",
+  "version": "1.0.0",
+  "description": "A small plan reviewer: checks a plan against the decision library and gives a verdict.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "review": "node review.ts",
+    "check-plans": "node check-plans.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test issue.test.ts score.test.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.3.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "typescript": "6.0.3"
+  }
+}

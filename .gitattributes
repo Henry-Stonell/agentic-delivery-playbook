@@ -1,0 +1,2 @@
+# Store text files with Unix line endings, so checks give the same result on every system.
+* text=auto eol=lf
