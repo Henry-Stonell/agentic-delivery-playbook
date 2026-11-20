@@ -1,6 +1,6 @@
 # 7. Two reviews you can open
 
-Two issues from the [demo](../demo/), on a made-up shopping list app. Open them on GitHub and read them from top to bottom: the plan, the reviewer's verdict, and the go. The mistake in the first plan on #1 was put in on purpose, to show what "doesn't fit" looks like. GitHub marks a comment that was edited, so you can see the verdicts weren't changed.
+Two issues from the [demo](../demo/), on a made-up shopping list app. Open them on GitHub and read them from top to bottom: the plan, the reviewer's verdict, and the go. The first plans on #1 and #3 both have a mistake put in on purpose, to show what "doesn't fit" looks like. This page walks through #1. The verdicts on #3 are on [page 8](08-results.md#the-demo-issues). GitHub marks a comment that was edited, so you can see the verdicts weren't changed.
 
 ## A plan that broke a decision
 

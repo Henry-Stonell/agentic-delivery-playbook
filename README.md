@@ -12,11 +12,14 @@ The repo is split into a few sections to show my ideas working:
 
 The full setup isn't here. This is a short demo. If you only read one page, read [two reviews you can open](docs/07-demo-reviews.md). It shows the plan review running on issues anyone can open.
 
-I no longer review every line of code myself, which might sound scary to some developers. But in my eyes, development has moved past that point. We have an extremely powerful tool that can be used to write code much faster, and my job now is to utilise that tool and make it safe and trustworthy. I need to make sure my tools understand the task properly, and judge whether a change is worth making or goes against our goals.
+## How I decide what can merge
 
-Tests, a visual check and a code review agent check the code. I check the decisions. That's where my ERP background helps: I can tell when a change would break the data model or the system around it.
+Agents write almost all of my code. Tests and a code review agent check the code. I check the decisions: does the change fit what was asked, the part of the app it belongs to, and what the app is for? That's where my ERP background helps: I can tell when a change would break the data model or the system around it.
 
-It doesn't matter much what language the code is in. That's how I moved from AL to TypeScript: the agents know the language, and my job is to give them what they need to write what I want.
+Two real examples from my own setup:
+
+- An issue bundled a security fix with a riskier change to a frozen part of the app. The idea agent said "doesn't fit" before any plan was written. The issue was split within minutes, and each part was reviewed on its own.
+- Someone pushed a branch for a deploy change before its plan had a go. The guard refused the pull request. The plan then went through five more reviews, got its go, and was deployed two days later.
 
 My most important thought: "Building the wrong thing ALWAYS costs more than an expensive, in-depth review beforehand." The most important check happens before any code is written.
 
@@ -38,6 +41,8 @@ flowchart TD
 ```
 
 Each step has to pass before the next one starts. Today the plan review runs on its own, and a guard makes its go binding. The other steps run inside each development session. Until a planned merge check enforces the order at the pull request, the later steps follow the written rule. [Page 2](docs/02-quality-chain.md#what-runs-today) shows what is built and what is planned. There are two ways around the order: an urgent fix, and work on the idea agent itself. In both cases I write the decision down and own it.
+
+The plan review has been live since October 2026. How I tested it and how it has done in use is on [page 3](docs/03-idea-agent.md#how-i-tested-it).
 
 ## What's in this repo
 

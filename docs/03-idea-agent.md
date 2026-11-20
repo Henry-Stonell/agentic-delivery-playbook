@@ -31,8 +31,20 @@ You can tweak a plan for hours and never start, and until something is built the
 
 ## How I tested it
 
-Before relying on it, I gave it six plans, each with a mistake hidden on purpose, like a database change the task had ruled out. It found all six. The test round also showed that it asked questions without suggesting answers. Now every question comes with suggested answers. Those six test plans aren't in this repo. The demo reviewer has its own, with every result on [page 8](08-results.md).
+**A test round.** On 27 October, the day the plan rules went in, I filed six test issues with problems planted on purpose, such as a plan that breaks a module boundary and a sub-issue that breaks its parent's scope. The round showed that it asked questions without suggesting answers. Prompt fixes followed the same day, and now every question comes with suggested answers.
+
+**A replay of real past issues.** On 28 October I replayed it on twelve real issues against an answer key I set. It matched 7 of 12. The definitions of the verdicts were too loose, so I tightened them and replayed two of the cases it had got wrong. Both came out right.
+
+**A saved eval set.** Then I built an eval set from real and invented plans: 18 cases, each run three times. On the latest full run, on 18 November, all 18 cases matched, 54 of 54 runs. I set the answer keys myself. The rule is a full run before merging any change that could alter a verdict. Today I start it by hand. Next, it runs automatically whenever the prompt or the model changes.
+
+These cases use internal data, so they aren't in this repo. The eight test plans on [page 8](08-results.md) are a different set: they belong to the demo reviewer, and they are in this repo.
+
+## How it has done in use
+
+It started posting on 23 October 2026, and the plan rules and the run log followed on 27 October. By 20 November it had posted 50 plan reviews on 13 real issues. It also checks new issues before any plan is written. One issue bundled a security fix with a riskier change to a frozen area. It said "doesn't fit", and the issue was split within minutes.
+
+Early on, one run read old rules from the wrong branch and commented on a test issue it should have ignored. The fix was in within minutes: every run now checks out the development branch and checks that the rule files exist before it starts.
 
 ## It never reviews itself
 
-When I change the idea agent, the issue gets a hands-off label, so the gate never reviews its own construction. The change still has to pass the test plans and the guard's test cases, and I give the go myself as the owner. It's the one case where the maker also checks, which is why the tests have to pass first.
+When I change the idea agent, the issue gets a hands-off label, so the gate never reviews its own construction. The change has to pass a full run of the eval set before it merges, and I give the go myself as the owner. It's the one case where the maker also checks, which is why the eval has to pass first.

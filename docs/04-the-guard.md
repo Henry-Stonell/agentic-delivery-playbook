@@ -8,9 +8,9 @@ I set the guard's rules: what counts as a go, who may give one, and to refuse wh
 
 ## How it decides
 
-The guard is a Claude Code hook (PreToolUse). It runs before every push, new pull request and new branch, whether the agent uses git, the GitHub command line or the GitHub connector.
+The guard is a Claude Code hook (PreToolUse). It runs before every push and new pull request, whether the agent uses git, the GitHub command line or the GitHub connector. Through the connector, it also covers new branches and file changes.
 
-It passes only if the latest plan has a "fits" from the idea agent's own account, or a written decision from the owner or deputy after a review. A new version of the plan cancels the go. If GitHub can't be read, it refuses. The rules and their 18 test cases are in the [guard template](../templates/guard.md).
+It passes only if the latest plan has a "fits" from the idea agent's own account, or a written decision from the owner or deputy after a review. A new version of the plan cancels the go. If GitHub can't be read, it refuses. The rules and 18 test cases are in the [guard template](../templates/guard.md). My own guard has 49 self-test cases, all passing, and I run them by hand. It has already refused a real pull request: someone pushed a branch before the plan had its go.
 
 ## What can go wrong
 
@@ -23,8 +23,8 @@ It's a guardrail, not a wall. It only sees what the agent does through its own t
 | Text in an issue tells the agent to ignore its other rules | Those rules are guidance, not a guard. The later checks still run. | Partly covered |
 | The plan changes after a "fits" | The go is cancelled until the new version is reviewed. | Covered |
 | The hands-off label is used to skip the gates | It only counts when the owner or deputy added it. Keep that group small. | Covered |
-| An agent calls the GitHub API directly, like with curl, or a person pushes by hand | The hook doesn't see it. Branch protection on the server stops it. | Needs a second layer |
-| The idea agent says "fits" when it shouldn't | The later steps still run: the visual test, the tests, the code review and the consultant test. | Partly covered |
+| An agent calls the GitHub API directly, like with curl, or a person pushes by hand | The hook doesn't see it. Branch protection on the server would stop it, but I haven't turned it on yet. | Not covered: needs a second layer |
+| The idea agent says "fits" when it shouldn't | The later steps still run: the tests, the code review and the consultant test. | Partly covered |
 
 ## Exceptions
 
