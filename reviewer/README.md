@@ -31,4 +31,4 @@ To post a verdict, set `REVIEWER_TOKEN` to a token of the reviewer's GitHub acco
 
 ## Results
 
-Every real run, right or wrong, is on the [results page](../docs/08-results.md). A review costs about one cent.
+Every real run, right or wrong, is on the [results page](../docs/08-results.md). A review by this demo reviewer costs about one cent. That is for this single call on a small app. In my full setup, a review in the eval costs about 50 cents on average, at API prices.

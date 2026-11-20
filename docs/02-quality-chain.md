@@ -26,9 +26,10 @@ This is my own setup, not this repo. The [demo reviewer](../reviewer/) is a cut-
 |---|---|
 | Plan review (step 4), as a routine that starts on its own | Built |
 | Guard that makes the plan review's go binding | Built |
-| Steps 5 to 9 | Built, run inside each development session |
+| Steps 5 and 7 to 9 | Built. Some checks run on every pull request, the rest inside each development session |
+| Visual user test (step 6) as an automated Playwright test | Planned |
 | The rest of the chain as routines | Being built |
-| A routine that checks the gates are on and running | Being built |
+| A routine that checks the gates are on and running | Planned |
 | Merge check that refuses anything that skipped a step | Planned |
 | Escalation of issues nobody has touched | Planned |
 

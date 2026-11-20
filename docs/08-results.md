@@ -1,6 +1,6 @@
 # 8. Results from real runs
 
-Everything on this page comes from real runs of the [small reviewer](../reviewer/), a cut-down version of the idea agent, on the test plans and the [demo issues](../demo/). Nothing is made up or edited afterwards.
+Everything on this page comes from real runs of the [small reviewer](../reviewer/), a cut-down version of the idea agent, on the test plans and the [demo issues](../demo/). Nothing is made up or edited afterwards. These numbers are for the demo reviewer, a single call on a small made-up app. They do not describe how my full idea agent performs.
 
 ## The test plans
 
@@ -30,7 +30,7 @@ Four demo issues, six reviews.
 
 ## Cost
 
-Claude Opus 5.5 at high effort. A review costs about one cent: between $0.008 and $0.014 each in the test run, $0.08 for all eight. The six demo reviews cost $0.07 together, between $0.008 and $0.015 each. Two more reviews ran before the reviewer's GitHub token was set, so they weren't posted. They cost $0.02 and gave the same verdicts as the posted ones on #1 and #2. Everything on this page cost $0.17.
+Claude Opus 5.5 at high effort. For this demo reviewer, a review costs about one cent: between $0.008 and $0.014 each in the test run, $0.08 for all eight. The six demo reviews cost $0.07 together, between $0.008 and $0.015 each. Two more reviews ran before the reviewer's GitHub token was set, so they weren't posted. They cost $0.02 and gave the same verdicts as the posted ones on #1 and #2. Everything on this page cost $0.17.
 
 ## What these numbers don't show
 
@@ -38,3 +38,4 @@ Claude Opus 5.5 at high effort. A review costs about one cent: between $0.008 an
 - I planted the mistakes myself, and each one goes against one clear decision. Real mistakes are often less clear.
 - Most plans were reviewed once. The two that ran twice got the same verdict both times, but the same plan can still get a different answer on another run.
 - Nothing here measures time saved or rework avoided.
+- The one-cent cost is for the demo reviewer only. In my own setup, a review in the eval costs about 50 cents on average, at API prices.
